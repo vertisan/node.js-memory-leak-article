@@ -1,0 +1,12 @@
+leak-investigation/dumps/leak/03.heapsnapshot filter=lfs diff=lfs merge=lfs -text
+find-the-leak-the-practical-example/dumps/fixed_1.heapsnapshot filter=lfs diff=lfs merge=lfs -text
+find-the-leak-the-practical-example/dumps/leak_3.heapsnapshot filter=lfs diff=lfs merge=lfs -text
+leak-investigation/dumps/fix/01.heapsnapshot filter=lfs diff=lfs merge=lfs -text
+find-the-leak-the-practical-example/dumps/leak_2.heapsnapshot filter=lfs diff=lfs merge=lfs -text
+leak-investigation/dumps/fix/02.heapsnapshot filter=lfs diff=lfs merge=lfs -text
+leak-investigation/dumps/fix/03.heapsnapshot filter=lfs diff=lfs merge=lfs -text
+leak-investigation/dumps/leak/01.heapsnapshot filter=lfs diff=lfs merge=lfs -text
+leak-investigation/dumps/leak/02.heapsnapshot filter=lfs diff=lfs merge=lfs -text
+find-the-leak-the-practical-example/dumps/fixed_2.heapsnapshot filter=lfs diff=lfs merge=lfs -text
+find-the-leak-the-practical-example/dumps/fixed_3.heapsnapshot filter=lfs diff=lfs merge=lfs -text
+find-the-leak-the-practical-example/dumps/leak_1.heapsnapshot filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,53 @@
+{
+  "name": "sample-app",
+  "license": "MIT",
+  "author": "Paweł Farys <pawel.farys@streamsage.io>",
+  "version": "1.0.0",
+  "main": "./src/index.ts",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "lint": "eslint ./src --ext .ts --ext .tsx",
+    "lint:fix": "eslint ./src --ext .ts --ext .tsx --fix",
+    "prettier": "prettier --check \"src/**/*.ts\"",
+    "prettier:fix": "prettier --write \"src/**/*.ts\"",
+    "start": "node --inspect ./dist/index.js",
+    "watch": "ts-node-dev --inspect --poll --respawn -r dotenv/config -r tsconfig-paths/register ./src/index.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.1",
+    "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.15",
+    "@types/node": "^18.11.17",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
+    "eslint": "^8.30.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1",
+    "rimraf": "^3.0.2",
+    "source-map-support": "^0.5.19",
+    "ts-node-dev": "^2.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "{src,test}/**/*.ts": [
+      "eslint --max-warnings=0"
+    ],
+    "**/*.{{j,t}s,json,yml,md}": [
+      "prettier --write"
+    ]
+  }
+}
